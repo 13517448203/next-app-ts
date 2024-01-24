@@ -25,3 +25,21 @@ body {
     )
     rgb(var(--background-start-rgb));
 }
+
+a:link {
+  color: #2d6be6;
+  text-decoration: none;
+}
+
+a:visited {
+  color: #2d6be6;
+}
+
+a:hover {
+  color: #2d6be6;
+  text-decoration: underline;
+}
+
+a:active {
+  color: #2d6be6;
+}
