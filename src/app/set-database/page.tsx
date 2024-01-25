@@ -1,18 +1,21 @@
 import React from 'react'
-import { Metadata } from 'next'
 import List from './_components/List'
-
-export const metadata: Metadata = {
-  title: '这是列表页面',
-  description: '这是一个使用next输出的列表页面',
-  keywords: 'next.js,react'
-}
+import Link from 'next/link'
 
 function ListPage() {
   return (
     <div>
-      ListPage
-      <List />
+      <ul>
+        <li>
+          <Link href="/set-database/prisma" className="link">Prisma</Link>
+        </li>
+        <li>如何将数据库部署到 Vercel</li>
+        <li>
+          <a href="https://nextjs.org/learn/dashboard-app/fetching-data">
+            Next.js 官方文档 - 获取数据
+          </a>
+        </li>
+      </ul>
     </div>
   )
 }

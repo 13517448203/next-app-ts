@@ -10,7 +10,6 @@ type Props = {
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return {
     title: '这是详情页--' + params.id,
-
   }
 }
 

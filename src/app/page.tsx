@@ -8,10 +8,6 @@ export default function Home() {
       text: 'Next introduction'
     },
     {
-      href: '/',
-      text: 'todo SSR、ISR、SSG'
-    },
-    {
       href: '/layout-page',
       text: 'Pages and layouts'
     },
@@ -22,6 +18,30 @@ export default function Home() {
     {
       href: '/set-database',
       text: 'Setting up your database'
+    },
+    {
+      href: '/render',
+      text: 'Rendering'
+    },
+    {
+      href: '/use-server',
+      text: 'User server'
+    },
+    {
+      href: '/handle-error',
+      text: 'Handling errors'
+    },
+    {
+      href: '/form-valid',
+      text: 'Form valid'
+    },
+    {
+      href: '/auth',
+      text: 'Authentication'
+    },
+    {
+      href: '/metadata',
+      text: 'Metadata'
     },
   ]
   return (
