@@ -1,10 +1,10 @@
 import React from 'react'
-import TipMdx from './tip.mdx'
+// import TipMdx from './tip.mdx'
 
 function page() {
   return (
     <div>
-      <TipMdx />
+      {/* <TipMdx /> */}
     </div>
   )
 }

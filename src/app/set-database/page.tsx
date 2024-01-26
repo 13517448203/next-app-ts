@@ -1,5 +1,4 @@
 import React from 'react'
-import List from './_components/List'
 import Link from 'next/link'
 
 function ListPage() {

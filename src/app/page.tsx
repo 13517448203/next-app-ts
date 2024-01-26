@@ -50,7 +50,7 @@ export default function Home() {
       <ul>
         {
           list.map(item => (
-            <li>
+            <li key={item.href}>
               <Link href={item.href} className="link">{item.text}</Link>
             </li>
           ))
