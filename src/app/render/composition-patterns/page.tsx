@@ -3,7 +3,7 @@ import React from 'react'
 function DemoPage() {
   return (
     <div>
-      TODO
+      服务端组件和客户端组件组合使用
     </div>
   )
 }

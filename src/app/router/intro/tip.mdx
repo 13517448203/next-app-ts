@@ -1,0 +1,11 @@
+# Next Router
+Next.js 使用基于文件系统的路由器。Next 有 [App Router](https://nextjs.org/docs/app/building-your-application/routing)  和 [Pages Router](https://nextjs.org/docs/pages/building-your-application/routing) 两种路由模式。
+
+注意：App Router 的优先级高于 Pages Router。跨目录的路由不应解析为相同的 URL 路径，并且会导致构建时错误以防止冲突。
+
+# App Router
+App Router 模式, 路由配置在 **app** 目录下, 使用文件夹来定义路由，文件目录作为路由路径，page 文件代表可访问的页面。如：url 为 /dashboard 时，目录结构是 app/dashboard/page.tsx。
+
+默认情况下，页面是 [React Server Components](https://nextjs.org/docs/app/building-your-application/rendering/server-components)，但可以设置为 [Client Components](https://nextjs.org/docs/app/building-your-application/rendering/client-components)。
+
+

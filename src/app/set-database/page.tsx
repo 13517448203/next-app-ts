@@ -8,11 +8,8 @@ function ListPage() {
         <li>
           <Link href="/set-database/prisma" className="link">Prisma</Link>
         </li>
-        <li>如何将数据库部署到 Vercel</li>
         <li>
-          <a href="https://nextjs.org/learn/dashboard-app/fetching-data">
-            Next.js 官方文档 - 获取数据
-          </a>
+          <Link href="/set-database/use-sql" className="link">获取数据</Link>
         </li>
       </ul>
     </div>

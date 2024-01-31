@@ -2,7 +2,7 @@
 import React from 'react'
 import TipMdx from './tip.mdx'
 
-function page() {
+function Page() {
   return (
     <div>
       <TipMdx />
@@ -10,4 +10,4 @@ function page() {
   )
 }
 
-export default page
+export default Page

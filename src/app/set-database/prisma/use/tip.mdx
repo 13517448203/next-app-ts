@@ -1,0 +1,47 @@
+# 基本使用
+- 项目中安装 Prisma
+
+  **npm install prisma --save-dev**
+
+- 在 Prisma 模式中对数据进行建模，通常是在 prisma/schema.prisma 中，如：
+
+  ```
+  model User {
+    id    Int     @id @default(autoincrement())
+    email String  @unique
+    name  String?
+    posts Post[]
+  }
+  ```
+
+- 根据 Prisma 数据模型文件（通常是 schema.prisma）生成 Prisma Client 所需的数据库访问代码
+
+  **npx prisma generate**
+
+- 将 Prisma 数据模型文件中定义的更改推送到数据库中，包括创建新表、更新表结构或应用其他数据库模式更改。
+
+  **npx prisma db push**
+
+- 在开发过程中执行数据库迁移的命令。将应用尚未应用到数据库的所有挂起迁移，并确保数据库与当前的 Prisma 数据模型保持同步。
+
+  **npx prisma migrate dev**
+
+- 创建一个新的迁移，用于向数据库添加新表、列或索引。
+
+  **npx prisma migrate dev --name init**
+
+- 撤销并删除所有已应用的迁移，将数据库还原到初始状态。
+
+  **npx prisma migrate reset --name reset**
+
+- 打开 Prisma 内置的 GUI，用于查看和编辑数据库中的数据。
+
+  **npx prisma studio**
+
+- 执行 Prisma 客户端代码向数据库发起操作。
+  - 安装 TypeScript 支持
+
+    **npm install typescript ts-node @types/node --save-dev**
+  - 执行代码
+
+    **npx ts-node script.ts**

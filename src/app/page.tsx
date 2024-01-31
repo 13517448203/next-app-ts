@@ -8,24 +8,16 @@ export default function Home() {
       text: 'Next introduction'
     },
     {
-      href: '/layout-page',
-      text: 'Pages and layouts'
-    },
-    {
-      href: '/link',
-      text: 'Linking and navigating'
-    },
-    {
-      href: '/set-database',
-      text: 'Setting up your database'
+      href: '/router',
+      text: 'Router'
     },
     {
       href: '/render',
       text: 'Rendering'
     },
     {
-      href: '/use-server',
-      text: 'User server'
+      href: '/set-database',
+      text: 'Setting up your database'
     },
     {
       href: '/handle-error',

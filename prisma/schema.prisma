@@ -6,34 +6,46 @@ generator client {
 }
 
 datasource db {
-  provider = "sqlite"
-  url      = env("DATABASE_URL")
+  provider = "postgresql"
+  url = env("POSTGRES_PRISMA_URL") // uses connection pooling
+  directUrl = env("POSTGRES_URL_NON_POOLING") // uses a direct connection
+}
+
+model Post {
+  id        String     @default(cuid()) @id
+  title     String
+  content   String?
+  published Boolean @default(false)
+  author    User?   @relation(fields: [authorId], references: [id])
+  authorId  String?
 }
 
 model User {
-  id    Int     @id @default(autoincrement())
-  email String  @unique
-  name  String?
+  id            String       @default(cuid()) @id
+  name          String?
+  email         String?   @unique
+  createdAt     DateTime  @default(now()) @map(name: "created_at")
+  updatedAt     DateTime  @updatedAt @map(name: "updated_at")
+  posts         Post[]
+  @@map(name: "users")
 }
 
 model Goods {
-  id String @id @unique @default(uuid())
-  name String
-  desc String @default("")
-  content String @default("")
-  createdAt DateTime @default(now()) @map("created_at")
-  updatedAt DateTime @default(now()) @map("updated_at")
-
-  @@map("products")
+  id        String    @id @unique      @default(uuid())
+  name      String
+  desc      String    @default("")
+  content   String    @default("")
+  createdAt DateTime  @default(now())  @map("created_at")
+  updatedAt DateTime  @default(now())  @map("updated_at")
+  @@map(name: "products")
 }
 
 model Article {
-  id String @id @unique @default(uuid())
-  title String
-  desc String? @default("")
-  content String? @default("")
-  createdAt DateTime @default(now()) @map("created_at")
-  updatedAt DateTime @default(now()) @map("updated_at")
-
-  @@map("articles")
+  id        String    @id @unique      @default(uuid())
+  title     String
+  desc      String?   @default("")
+  content   String?   @default("")
+  createdAt DateTime  @default(now())  @map("created_at")
+  updatedAt DateTime  @default(now())  @map("updated_at")
+  @@map(name: "articles")
 }
